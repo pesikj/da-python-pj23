@@ -52,7 +52,7 @@ for radek in prodej_knih:
         print(radek[0])
 ```
 
-### První opakování cyklku
+### První opakování cyklu
 
 Python do proměnné `radek` vloží to, co je na začátku seznamu, tj. prodeje v Praze. To, že jde o proměnnou `radek`, určíme tím, že název `radek` vložíme mezi `for` a `in`.
 
