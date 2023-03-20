@@ -1,6 +1,8 @@
 # da-python-pj23
 
 * [Závorky v Pythonu](zavorky.ipynb)
+* [Cyklus](cyklus.md)
+* [Komplexní příklad (chatbot)](komplexni_priklad_1.ipynb)
 
 ## Řešení příkladů
 
