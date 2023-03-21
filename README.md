@@ -3,6 +3,7 @@
 * [Závorky v Pythonu](zavorky.ipynb)
 * [Cyklus](cyklus.md)
 * [Komplexní příklad (chatbot)](komplexni_priklad_1.ipynb)
+* [Použití Chat GPT](chat_gpt.md)
 
 ## Řešení příkladů
 
