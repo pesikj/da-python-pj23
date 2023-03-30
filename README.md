@@ -4,6 +4,7 @@
 * [Cyklus](cyklus.md)
 * [Komplexní příklad (chatbot)](komplexni_priklad_1.ipynb)
 * [Použití Chat GPT](chat_gpt.md)
+* [JSON, REST API a slovníky](json_slovniky.ipynb)
 
 ## Řešení příkladů
 
