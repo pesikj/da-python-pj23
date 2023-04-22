@@ -7,6 +7,11 @@
 * [JSON, REST API a slovníky (30. 3. 2023, Brno)](json_slovniky.ipynb)
 * [JSON, slovníky a čtení ze souborů](json_slovniky_2.ipynb)
 
+## Úvod do statistiky
+
+* [Instalace](instalace.md)
+* [Lekce 1](uvod_do_statistiky_1.ipynb)
+
 ## Řešení příkladů
 
 * [Řešení příkladů z kapitoly Co všechno už umíme](uvod_reseni.ipynb)
