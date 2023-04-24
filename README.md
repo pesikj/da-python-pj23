@@ -11,6 +11,7 @@
 
 * [Instalace](instalace.md)
 * [Lekce 1](uvod_do_statistiky_1.ipynb)
+* [Lekce 2](hypotezy_regrese.md)
 
 ## Řešení příkladů
 
