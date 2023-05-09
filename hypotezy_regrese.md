@@ -64,11 +64,13 @@ Dále zvolíme vhodný test pro ověření naší hypotézy. Statistických test
 
 Vraťme se k výběru korelačního koeficientu. Pro test použijeme test pomocí tzv. Kendallovo tau. Tento test je jedním z tzv. neparametrických testů, tj. nevyžaduje, aby data měla normální rozdělení. Funguje na porovnání pořadí hodnot. Pokud jsou data závislá, pak by logicky nejdražší domy měly být mezi největšími a nejlevnější domy mezi nejmenšími. Pokud by naopak data byla nezávislá, největší domy budou jak mezi drahými, tak mezi levnými, a to samé platí i pro nejmenší domy.
 
+Data jsou ke stažení [zde](house_prices.csv).
+
 ```py
 import pandas
 from scipy import stats
 
-data = pandas.read_csv("clean_train.csv")
+data = pandas.read_csv("house_prices.csv")
 res = stats.kendalltau(data["SalePrice"], data["GrLivArea"])
 print(res)
 ```
@@ -94,10 +96,6 @@ Pokud si zvolíme hladinu významnosti jako 5 %, což je nejčastější volba, 
 - Pokud je **p-hodnota < 0.05, zamítáme nulovou hypotézu** (tj. platí alternativní hypotéza).
 - Pokud je **p-hodnota > 0.05, nezamítáme nulovou hypotézu.**
 
-Na internetu lze nalézt obrovské množství vědeckých i méně vědeckých obrázků, které vám umožní si toto pravidlo zapamatovat.
-
-![](images/p-value_meme.png)
-
 V našem případě je p-hodnota `1.995410251143093e-211`. Pozor, velmi důležitý je závěr `e-211`. Číslo je ve skutečnosti extrémně malé, prvních 210 čísel desetinné části jsou 0 a až poté přichází nějaká nenulová čísla. Hodnota je tedy rozhodně menší než 0.05, tím pádem nulovou hypotézu zamítáme a tvrdíme, že obytná plocha domu a cena domu jsou lineárně závislé. Ocenění domu by tedy mělo uvažovat podlahovou plochu domu.
 
 ## Test normality dat
@@ -113,7 +111,7 @@ Pro ověření normality dat existuje řada testů. Oblíbený je například Sh
 import pandas
 from scipy import stats
 
-data = pandas.read_csv("clean_train.csv")
+data = pandas.read_csv("house_prices.csv")
 res = stats.shapiro(data["SalePrice"])
 print(res)
 ```
@@ -147,7 +145,7 @@ import pandas
 import seaborn
 import matplotlib.pyplot as plt
 
-data = pandas.read_csv("clean_train.csv")
+data = pandas.read_csv("house_prices.csv")
 g = seaborn.regplot(x="GrLivArea", y="SalePrice", data=data, scatter_kws={"s": 1}, line_kws={"color":"r"})
 plt.show()
 ```
@@ -167,7 +165,7 @@ import pandas
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
-data = pandas.read_csv("clean_train.csv")
+data = pandas.read_csv("house_prices.csv")
 
 formula = "SalePrice ~ GrLivArea"
 data = sm.add_constant(data)
